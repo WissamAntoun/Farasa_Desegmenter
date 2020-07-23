@@ -125,9 +125,9 @@ for i, word_tuples in enumerate(unique_word_tuple):
 #%%
 count = 0
 for i, word_tuples in enumerate(tqdm(cleaned_typos)):
-    if desegment(word_tuples[0])!=word_tuples[1]:
+    if desegmentword(word_tuples[0])!=word_tuples[1]:
         print(word_tuples)
-        print(desegment(word_tuples[0]))
+        print(desegmentword(word_tuples[0]))
         print(i)
         count +=1
         
