@@ -15,68 +15,6 @@ with open('data/100ksentences.csv','r',encoding='utf-8') as f:
 
 # %%
 all_non_arabic_characters = r"[^\u0621-\u063A\u0641-\u064A ]+"
-prefix_list = list(set([
-    "ال",
-    "و",
-    "ف",
-    "ب",
-    "ك",
-    "ل",
-    "لل",
-    "\u0627\u0644",
-    "\u0648",
-    "\u0641",
-    "\u0628",
-    "\u0643",
-    "\u0644",
-    "\u0644\u0644",
-    "س",
-]))
-suffix_list = list(set([
-    "ه",
-    "ها",
-    "ك",
-    "ي",
-    "هما",
-    "كما",
-    "نا",
-    "كم",
-    "هم",
-    "هن",
-    "كن",
-    "ا",
-    "ان",
-    "ين",
-    "ون",
-    "وا",
-    "ات",
-    "ت",
-    "ن",
-    "ة",
-    "\u0647",
-    "\u0647\u0627",
-    "\u0643",
-    "\u064a",
-    "\u0647\u0645\u0627",
-    "\u0643\u0645\u0627",
-    "\u0646\u0627",
-    "\u0643\u0645",
-    "\u0647\u0645",
-    "\u0647\u0646",
-    "\u0643\u0646",
-    "\u0627",
-    "\u0627\u0646",
-    "\u064a\u0646",
-    "\u0648\u0646",
-    "\u0648\u0627",
-    "\u0627\u062a",
-    "\u062a",
-    "\u0646",
-    "\u0629",
-]))
-
-prefix_symbols = [ x+"+" for x in prefix_list]
-suffix_symblos = [ "+"+x for x in suffix_list]
 
 def normalize_alef(s):
     s = s.replace(araby.ALEF_HAMZA_ABOVE,araby.ALEF)
