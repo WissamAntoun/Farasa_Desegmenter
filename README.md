@@ -13,6 +13,8 @@ To import the functions use `from desegmentors import *`
 ```python
 >>> desegment("ال+يومي+ة")
 اليومية
+>>> desegment("ل+ال+يومي+ة") #Handles Lam + Al-Ataarif
+لليومية
 ```
 
 * `desegment_line`: Simple wrapper over `desegmentword` that splits a string by the `sep` character
